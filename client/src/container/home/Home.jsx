@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <Display />
+      {/* <Display /> */}
       <Gallery />
       <Footer />
     </div>
