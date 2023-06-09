@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <div className="header__container">
+    <div className="header__container mt-16">
       <div
         className="hero h-full w-5/6 rounded-2xl"
         style={backgroundImageStyle}

@@ -24,6 +24,7 @@ import stateContext from "./context/StateContext";
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [query, setQuery] = useState("");
 
   const apiKey = "api_key=55f130ea060d300d440fc9bf79c531c8";
   const randomMovieSearch = `https://api.themoviedb.org/3/discover/movie?${apiKey}`;
@@ -42,7 +43,7 @@ function App() {
   }, []);
 
   return (
-    <stateContext.Provider value={{ movies, setMovies }}>
+    <stateContext.Provider value={{ movies, setMovies, query, setQuery }}>
       <Router>
         <div className="header__bg">
           <Navbar />

@@ -1,10 +1,9 @@
-import { Display, Footer, Header, Gallery } from "../../components";
+import { Footer, Header, Gallery } from "../../components";
 
 const Home = () => {
   return (
     <div>
       <Header />
-      {/* <Display /> */}
       <Gallery />
       <Footer />
     </div>

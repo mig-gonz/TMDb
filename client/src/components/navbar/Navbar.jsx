@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 fixed top-0 z-10 w-full">
       <div className="flex-1">
         {paths.map((path) => (
           <a
