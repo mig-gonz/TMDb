@@ -9,3 +9,4 @@ export { default as Profile } from "./profile/Profile";
 export { default as Register } from "./register/Register";
 export { default as Movies } from "./movies/Movies";
 export { default as GalleryItem } from "./galleryItem/GalleryItem";
+export { default as Display } from "./display/Display";

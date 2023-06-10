@@ -1,10 +1,11 @@
-import { Footer, Header, Gallery } from "../../components";
+import { Footer, Header, Gallery, Display } from "../../components";
 
 const Home = () => {
   return (
     <div>
       <Header />
       <Gallery />
+      <Display />
       <Footer />
     </div>
   );

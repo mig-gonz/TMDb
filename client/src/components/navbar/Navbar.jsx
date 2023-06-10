@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "./navbar.css";
 import blackSwanImage from "../../assets/blackswan.jpg";
 import whiteSwanImage from "../../assets/chris-zhang-mpK_8ekpfu8-unsplash.jpg";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const paths = [
     { label: "Shmovie Fanatics", path: "/" },
@@ -14,23 +17,39 @@ const Navbar = () => {
 
   const handleNavigation = (path) => {
     navigate(path);
+    setMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
   };
 
   return (
-    <div className="navbar bg-base-100 fixed top-0 z-10 w-full">
+    <div className="navbar bg-base-100  fixed top-0 z-10 w-full">
       <div className="flex-1">
-        {paths.map((path) => (
-          <a
-            key={path.path}
-            className="btn btn-ghost normal-case text-2xl"
-            onClick={() => {
-              handleNavigation(path.path);
-              console.log(path.path);
-            }}
-          >
-            {path.label}
-          </a>
-        ))}
+        {/* Hamburger Menu */}
+        <button
+          className={`hamburger-menu ${isMenuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
+          <GiHamburgerMenu color="#fff" size={27} />
+        </button>
+
+        {/* Menu Items */}
+        <div className={`menu-items ${isMenuOpen ? "open" : ""}`}>
+          {paths.map((path) => (
+            <a
+              key={path.path}
+              className="btn btn-ghost normal-case text-2xl"
+              onClick={() => {
+                handleNavigation(path.path);
+                console.log(path.path);
+              }}
+            >
+              {path.label}
+            </a>
+          ))}
+        </div>
       </div>
 
       <div className="flex-none gap-2">

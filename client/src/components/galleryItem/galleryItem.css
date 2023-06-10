@@ -3,30 +3,47 @@
   justify-content: center;
   align-items: center;
   height: 300px;
-  margin-top: ;
 
   background-color: rgb(216, 207, 207);
   border-top: solid 2px black;
   border-bottom: solid 2px black;
+  overflow-x: auto;
 }
-/* Width and height for the scrollbar track */
+
+.flex {
+  flex-wrap: nowrap;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 200px;
+  margin-right: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  filter: brightness(1.5);
+}
+
+.card:hover {
+  filter: brightness(2);
+  cursor: pointer;
+}
+
+.card .image-full {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-/* Styles for the scrollbar track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Styles for the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
   background: #3c3d3f;
   border-radius: 4px;
 }
-
-/* Styles for the scrollbar thumb on hover */
-/* ::-webkit-scrollbar-thumb:hover {
-    background: #000000;
-  } */

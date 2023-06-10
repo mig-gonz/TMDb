@@ -2,6 +2,7 @@
   width: 20em;
   margin-right: 1em;
 }
+
 div a:first-child {
   background: -webkit-linear-gradient(
     103.22deg,
@@ -13,4 +14,57 @@ div a:first-child {
   -o-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 800px) {
+  .input__width {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.flex-1 {
+  display: flex;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.menu-items {
+  display: flex;
+}
+
+@media screen and (max-width: 425px) {
+  .hamburger-menu {
+    display: block;
+    margin-right: 1em;
+  }
+
+  .input__width {
+    width: calc(100% - 3em);
+    margin-right: 4em;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 1rem;
+  }
+
+  .menu-items.open {
+    display: flex;
+  }
 }
